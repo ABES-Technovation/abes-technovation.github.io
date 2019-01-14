@@ -12,8 +12,7 @@ const styles = () => {
     return (
         {
             card: {
-                // maxHeight : 600,
-                // maxWidth: 400,
+                height : 95 + '%',
                 margin: '0px 15px 15px 15px'
             },
             media: {

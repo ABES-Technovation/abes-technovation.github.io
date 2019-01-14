@@ -43,7 +43,7 @@ const Main = (props) => {
             </Paper>
             {
                 cardData.member.yearWiseMembers.map((element, index) => (
-                    <Paper className={classes.paperStyle} elevation={0} key={index}>
+                    <Paper className={classes.paperStyle} elevation={1} key={index}>
                         <HorizontalScrollList data={{ data : element, name: makeTitle(index) }}></HorizontalScrollList>
                     </Paper>
                 ))

@@ -44,15 +44,16 @@ const HorizontalScrollList = props => {
         );
     } else {
         cardStyle = (
-            <h1>Members bahut saare</h1>
+            <h5>Members List Coming Soon...</h5>
         );
     }
 
     return (
+
         <div>
             <h1>{title}</h1>
             <div className={classes.root}>
-                <GridList className={classes.gridList} cols={2.5} cellHeight='auto'>
+                <GridList className={classes.gridList} cols={(window.innerWidth <= 500) ? 1.25 : 2.5} cellHeight='auto'>
                     {cardStyle}
                 </GridList>
             </div>
