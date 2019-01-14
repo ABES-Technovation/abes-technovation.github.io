@@ -1,25 +1,81 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './components/Header/Header'
+import Main from './components/Main/Main'
 class App extends Component {
+
+  tileData = {
+    events: {
+      data: [
+        {
+          eventName: "Some Workshop",
+          eventImg: "https://img.rwgenting.com/rwgenting/uploadedImages/Images/Casino/Highlights/Earn_and_Buy_Promotion/AOS-banner.jpg?n=211"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        },
+        {
+          eventName: "Some Coding Contest",
+          eventImg: "https://cacm.acm.org/system/assets/0002/7480/052417.balloons.jpg"
+        }
+      ]
+    },
+    member: {
+      yearWiseMembers: [
+        [
+          {
+            name: "Vaibhav Sahu",
+            img: "SomeImg.img"
+          }, 
+          {
+            name: "Manas Garg",
+            img: "some.img"
+          }
+        ],
+        [
+          {
+            name: "atul bisht",
+            img: "Someimg.img"
+          }
+        ],
+        [
+          {
+            name: "Someone",
+            img: "someone.img"
+          }
+        ]
+
+      ],
+
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <Header />
+        <Main data={this.tileData} />
       </div>
     );
   }
