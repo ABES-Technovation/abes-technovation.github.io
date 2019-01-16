@@ -23,7 +23,6 @@ const styles = () => {
 }
 
 const EventCard = (props) => {
-    console.log(props)
     const { classes } = props;
     const { data } = props;
     return (

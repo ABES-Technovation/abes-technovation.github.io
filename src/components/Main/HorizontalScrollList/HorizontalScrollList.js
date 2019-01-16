@@ -30,7 +30,6 @@ const HorizontalScrollList = props => {
     const tileData = props.data;
 
     let title = tileData.name;
-    console.log(tileData)
     let cardStyle = null;
 
     if (title === "Events") {
