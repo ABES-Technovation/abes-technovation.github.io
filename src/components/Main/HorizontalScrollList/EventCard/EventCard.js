@@ -12,13 +12,17 @@ const styles = () => {
     return (
         {
             card: {
-                height: '98%',
                 margin: '0px 15px 15px 15px',
-                boxShadow : 'none',
+                boxShadow: 'none',
                 border: '1px #e1e4e8 solid !important'
             },
             media: {
                 height: 200,
+            },
+            root: {
+                fontWeight: '800',
+                fontFamily: "'Quicksand', sans-serif",
+                fontSize: 16,
             },
         }
     );
@@ -35,7 +39,7 @@ const EventCard = (props) => {
                     image={data.eventImg}
                     title={data.eventName} />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography classes={{ root: classes.root }} color='primary' gutterBottom >
                         {data.eventName}
                     </Typography>
                     <Typography component="p">

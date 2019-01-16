@@ -7,9 +7,9 @@ import HorizontalScrollList from './HorizontalScrollList/HorizontalScrollList'
 const styles = theme => ({
     paperStyle: {
         ...theme.mixins.gutters(),
-        paddingTop: theme.spacing.unit * 1,
-        paddingBottom: theme.spacing.unit * 1,
-        margin: "15px 0px"
+        paddingTop: theme.spacing.unit * 0.5,
+        paddingBottom: theme.spacing.unit * 0.5,
+        margin: "10px 0px"
     },
 });
 
