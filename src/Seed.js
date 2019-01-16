@@ -46,6 +46,18 @@ const data = {
           {
             name: "Manas Garg",
             img: "some.img"
+          }, 
+          {
+            name: "Manas Garg",
+            img: "some.img"
+          }, 
+          {
+            name: "Manas Garg",
+            img: "some.img"
+          }, 
+          {
+            name: "Manas Garg",
+            img: "some.img"
           }
         ],
         [

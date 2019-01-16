@@ -12,11 +12,13 @@ const styles = () => {
     return (
         {
             card: {
-                height : 95 + '%',
-                margin: '0px 15px 15px 15px'
+                height: '98%',
+                margin: '0px 15px 15px 15px',
+                boxShadow : 'none',
+                border: '1px #e1e4e8 solid !important'
             },
             media: {
-                minHeight: 200,
+                height: 200,
             },
         }
     );
@@ -31,7 +33,7 @@ const EventCard = (props) => {
                 <CardMedia
                     className={classes.media}
                     image={data.eventImg}
-                    title={data.eventName}/>
+                    title={data.eventName} />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {data.eventName}

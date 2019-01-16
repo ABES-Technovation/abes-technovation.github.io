@@ -4,7 +4,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile'
 
 import EventCard from './EventCard/EventCard';
-// import MemberCard from './EventCard/EventCard';
+import MemberCard from './MemberCard/MemberCard';
 
 const styles = theme => {
     return (
@@ -17,6 +17,7 @@ const styles = theme => {
                 backgroundColor: theme.palette.background.paper,
             },
             gridList: {
+                width : 100+'%',
                 flexWrap: 'nowrap',
                 // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
                 transform: 'translateZ(0)',
@@ -43,16 +44,19 @@ const HorizontalScrollList = props => {
         );
     } else {
         cardStyle = (
-            <h5>Members List Coming Soon...</h5>
+            tileData.data.map((cardData, index) => (
+                <GridListTile key={index} >
+                    < MemberCard data={cardData} />
+                </GridListTile>
+            ))
         );
     }
 
     return (
-
         <div>
             <h1>{title}</h1>
             <div className={classes.root}>
-                <GridList className={classes.gridList} cols={(window.innerWidth <= 500) ? 1.25 : 2.5} cellHeight='auto'>
+                <GridList className={classes.gridList} cols={(title === 'Events') ? ((window.innerWidth <= 700) ? 1.25 : 3.5) : ((window.innerWidth <= 700) ? 1.2 : 4.5)} cellHeight='auto'>
                     {cardStyle}
                 </GridList>
             </div>

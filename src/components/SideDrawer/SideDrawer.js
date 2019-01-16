@@ -12,8 +12,6 @@ import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import Divider from '@material-ui/core/Divider';
 
-// import { Icon } from '@material-ui/core';
-
 const styles = {
     paper: {
         minWidth: '20%',

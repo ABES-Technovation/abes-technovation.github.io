@@ -13,7 +13,7 @@ class App extends Component {
 
   state = {
     sidebarSwitch : false,
-    display : 0,
+    display : 1,
   }
 
   switchDrawerHandler = (switchState) => {
