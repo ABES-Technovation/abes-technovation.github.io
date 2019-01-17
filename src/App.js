@@ -6,53 +6,42 @@ import seed from './Seed';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import HomePage from './components/HomePage/HomePage';
 import AboutUs from './components/AboutUs/AboutUs';
+import Profile from './components/Profiles/profile';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
 
   tileData = seed;
 
   state = {
-    sidebarSwitch : false,
-    display : 0,
+    sidebarSwitch: false,
   }
 
   switchDrawerHandler = (switchState) => {
     this.setState(prevState => {
       let result = null;
-      if(switchState == null) {
+      if (switchState == null) {
         result = !prevState.sidebarSwitch;
       } else {
         result = switchState;
       }
-      return { sidebarSwitch : result };
+      return { sidebarSwitch: result };
     });
   }
 
-  switchPageHandler = (switchPageIndex) => {
-    this.setState({display : switchPageIndex});
-  }
-
-  
-
-  render() { 
-
-    let page = null;
-
-    if( this.state.display === 0 ) {
-      page = <HomePage />;
-    } else if(this.state.display === 1) {
-      page = <Main data={this.tileData} />;
-    } else if(this.state.display === 2) {
-      page = <AboutUs />
-    } else {
-      page = (<h1>Apna Time Aayega</h1>)
-    }
+  render() {
     return (
-      <div>
-        <Header data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
-        <SideDrawer data={this.state} switchDrawerHandler={this.switchDrawerHandler} switchPageHandler={this.switchPageHandler} />
-        {page}
-      </div>
+      <BrowserRouter>
+        <div>
+          <Header data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
+          <SideDrawer data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
+          <Route path='/' exact component={HomePage} />
+          <Route path='/explore' exact render={() => <Main data={this.tileData} />} />
+          <Route path='/aboutus' exact component={AboutUs} />
+          <Route path='/profile/:id' exact component={Profile} />
+        </div>
+      </BrowserRouter>
+
     );
   }
 }
