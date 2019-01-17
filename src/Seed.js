@@ -75,7 +75,16 @@ const data = {
 
       ],
 
-    }
+    },
+    profile:
+      {
+      id:'1',
+      name:'Akashdeep Arora',
+      about:'Something About the person',
+      skills:['some skill','some skill','some skill','some skill','some skill','some skill','some skill','some skill',
+      'some skill','some skill'],
+      image:'https://akashdeep98.github.io/assets/images/akash.jpg',
+      }
   }
 
 export default data;

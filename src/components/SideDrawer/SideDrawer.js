@@ -11,6 +11,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import WorkIcon from '@material-ui/icons/Work';
 import BeachAccessIcon from '@material-ui/icons/BeachAccess';
 import Divider from '@material-ui/core/Divider';
+import {Link} from 'react-router';
 
 const styles = {
     paper: {
@@ -40,6 +41,7 @@ const SideDrawer = (props) => {
     const sideBar = (
         <div>
             <List className={classes.root}>
+            <Link to={'/'}>
                 <ListItem tabIndex={0}
                     button
                     onClick={handleOnClick.bind(this, 0)}
@@ -49,9 +51,11 @@ const SideDrawer = (props) => {
                     </ListItemIcon>
                     <ListItemText disableTypography={true} primary="Home" />
                 </ListItem>
+                </Link>
                 <li>
                     <Divider variant="inset" />
                 </li>
+                <Link to={'/explore'}>
                 <ListItem tabIndex={1}
                     button
                     onClick={handleOnClick.bind(this, 1)}
@@ -61,7 +65,9 @@ const SideDrawer = (props) => {
                     </ListItemIcon>
                     <ListItemText disableTypography={true} primary="Explore" />
                 </ListItem >
+                 </Link>
                 <Divider variant="inset" component="li" />
+                <Link to={'/about'}>
                 <ListItem tabIndex={2}
                     button
                     onClick={handleOnClick.bind(this, 2)}
@@ -71,6 +77,7 @@ const SideDrawer = (props) => {
                     </ListItemIcon>
                     <ListItemText disableTypography={true} primary="About Us" />
                 </ListItem>
+                </Link>
             </List>
             <Divider />
         </div>
