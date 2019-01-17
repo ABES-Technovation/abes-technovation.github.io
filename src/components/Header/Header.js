@@ -22,7 +22,7 @@ const Header = (props) => {
 
     const { classes } = props;
     return (
-        <AppBar position="static" >
+        <AppBar position="fixed" color='primary' >
             <Toolbar>
                 <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer" onClick={props.switchDrawerHandler.bind(this , null)}>
                     <MenuIcon />

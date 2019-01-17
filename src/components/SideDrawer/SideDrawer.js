@@ -22,7 +22,8 @@ const styles = {
         width: '100%',
         fontWeight: '400',
         fontFamily: "'Quicksand', sans-serif",
-        color : '#494444'
+        color : '#494444',
+        marginTop: 60,
     },
     icon: {
         color : '#3F51B5',
