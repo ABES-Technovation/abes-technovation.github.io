@@ -2,7 +2,7 @@ import React from 'react';
 import './../Main/Main.css'
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
-import './HomePage.css'
+import './HomePage.css';
 
 const styles = theme => ({
     image: {

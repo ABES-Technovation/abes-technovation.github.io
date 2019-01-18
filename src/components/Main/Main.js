@@ -9,7 +9,7 @@ const styles = theme => ({
         ...theme.mixins.gutters(),
         paddingTop: theme.spacing.unit * 0.5,
         paddingBottom: theme.spacing.unit * 0.5,
-        margin: "10px 0px"
+        margin: "20px"
     },
 });
 
@@ -38,12 +38,12 @@ const Main = (props) => {
     let cardData = props.data;
     return (
         <div className="Container">
-            <Paper className={classes.paperStyle} elevation={1}>
+            <Paper className={classes.paperStyle} elevation={3}>
                 <HorizontalScrollList data={{ ...cardData.events, name: "Events" }}></HorizontalScrollList>
             </Paper>
             {
                 cardData.member.yearWiseMembers.map((element, index) => (
-                    <Paper className={classes.paperStyle} elevation={1} key={index}>
+                    <Paper className={classes.paperStyle} elevation={3} key={index}>
                         <HorizontalScrollList data={{ data : element, name: makeTitle(index) }}></HorizontalScrollList>
                     </Paper>
                 ))

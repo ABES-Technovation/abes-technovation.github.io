@@ -8,6 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 import AboutUs from './components/AboutUs/AboutUs';
 import Profile from './components/Profiles/profile';
 import { BrowserRouter, Route } from 'react-router-dom';
+import BottomBar from './components/BottomBar/BottomBar';
 
 class App extends Component {
 
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path='/explore' exact render={() => <Main data={this.tileData} />} />
           <Route path='/aboutus' exact component={AboutUs} />
           <Route path='/profile/:id' exact component={Profile} />
+          <BottomBar />
         </div>
       </BrowserRouter>
 
