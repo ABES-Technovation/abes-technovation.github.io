@@ -1,30 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
 import seed from '../../Seed';
+import { withStyles } from '@material-ui/core/styles';
 
-class profile extends Component {
-	render() {
-		var imageStyle={
-		height:60,
-		wideth:60,
-	};
-    return (
-    	
-      <div>
-        
-        <br/>
-        <div className='row'>
-        <div className='col m4,col s12,col l4'>
-        <center>
-        <img src={seed.profile.image} alt='something' style={imageStyle}/>
-        </center>
-        </div>
-        <div className='col m8,col s12,col l8'>
-        <center><h1>About:</h1></center><br/>
-        <p>{seed.profile.about}</p>
-        </div>
-      </div>
-      </div>
+import Grid from '@material-ui/core/Grid';
+
+ const styles = theme => ({
+    image: {
+        marginTop: '4%',
+        [theme.breakpoints.down('sm')]: {
+            width: 29 + '%',
+            height: 'auto',
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 50 + '%',
+            height: 'auto',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 32 + '%',
+            height: 100 + '%',
+        },
+    },
+     root: {
+    flexGrow: 1,
+  },
+  });
+
+const profile = (props) => {
+  const { classes } = props;
+    return (        
+        <Grid  container className={classes.root} style={{margin:'100px'}} >
+            <Grid md={4} sm={12}>
+                <center>
+                    <img src={process.env.PUBLIC_URL + '/akash.jpg'} alt='something' className={classes.image}/>
+                </center>
+            </Grid>
+            <Grid md={8} sm={12}>
+                <center><h1>About:</h1><br/>
+                <p>{seed.profile.about}</p></center>
+            </Grid>
+        </Grid>
       );
-}
-}
-export default profile;
+ };
+
+export default withStyles(styles)(profile);
