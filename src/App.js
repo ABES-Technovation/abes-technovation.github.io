@@ -38,7 +38,7 @@ class App extends Component {
           <SideDrawer data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
           <Route path='/' exact component={HomePage} />
           <Route path='/explore' exact render={() => <Main data={this.tileData} />} />
-          <Route path='/aboutus' exact component={AboutUs} />
+          <Route path='/about' exact component={AboutUs} />
           <Route path='/profile/:id' exact component={Profile} />
           <BottomBar />
         </div>
