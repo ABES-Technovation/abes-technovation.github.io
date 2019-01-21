@@ -72,7 +72,7 @@ const AboutUs = (props) => {
             <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '9s' }}></i>
             <Grid container={true} direction='column' alignItems='center'>
                 <img className={classes.image} src={process.env.PUBLIC_URL + '/team.svg'} alt='' />
-                <p className={classes.font}>"We beleive, To teach once is to learn Twice."</p>
+                <p className={classes.font}>"We believe, To teach once is to learn Twice."</p>
                 <p className={classes.font1}>Technovation is the technical club of Computer Science Department, ABES Engineering College. It was formed in 2010 with a vision to provide a platform for students to present their technical skills. With time it has emerged into a fully operational group having a team of 50+ students having expertise in various fields.
 
 Within the last few years, we have organised various events which include seminars on some of the latest technologies such as Android, PHP and Adobe Photoshop , Coding events, Aptitude tests and Quizes. We have always tried to ensure that the events imbibe knowledge and can start a deep thinking process within you.
