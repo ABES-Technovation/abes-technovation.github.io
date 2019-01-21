@@ -41,11 +41,10 @@ const styles = theme => ({
 })
 
 const HomePage = (props) => {
-
     const { classes } = props;
-    //id="particles-js"
+
     return (
-        <div className='Container' >
+        <div className='Container' style={{height:'100%'}} >
             <i className="fas fa-circle" id='dot' style={{ animationName: 'mv1', animationDelay: '1s' }}></i>
             <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '3s' }}></i>
             <i className="fas fa-circle" id='dot' style={{ animationName: 'mv3', animationDelay: '5s' }}></i>

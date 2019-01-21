@@ -9,6 +9,8 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Profile from './components/Profiles/profile';
 import { BrowserRouter, Route } from 'react-router-dom';
 import BottomBar from './components/BottomBar/BottomBar';
+import Event from './containers/Event/Event';
+import Aux from './Hoc/Aux';
 
 class App extends Component {
 
@@ -33,15 +35,16 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <Aux>
           <Header data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
           <SideDrawer data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
           <Route path='/' exact component={HomePage} />
           <Route path='/explore' exact render={() => <Main data={this.tileData} />} />
           <Route path='/about' exact component={AboutUs} />
           <Route path='/profile/:id' exact component={Profile} />
+          <Route path='/event/:id' exact component={Event} />
           <BottomBar />
-        </div>
+        </Aux>
       </BrowserRouter>
 
     );

@@ -1,4 +1,8 @@
 body {
     margin: 0px;
-    background: rgb(255, 255, 255)
+    background: rgb(255, 255, 255);
+}
+
+html , body , body > div {
+    height: 100%;
 }
