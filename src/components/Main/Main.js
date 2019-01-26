@@ -9,7 +9,7 @@ const styles = theme => ({
         ...theme.mixins.gutters(),
         paddingTop: theme.spacing.unit * 0.5,
         paddingBottom: theme.spacing.unit * 0.5,
-        margin: "20px"
+        margin: "20px 0px"
     },
 });
 
@@ -44,7 +44,7 @@ const Main = (props) => {
             {
                 cardData.member.yearWiseMembers.map((element, index) => (
                     <Paper className={classes.paperStyle} elevation={3} key={index}>
-                        <HorizontalScrollList data={{ data : element, name: makeTitle(index) }}></HorizontalScrollList>
+                        <HorizontalScrollList data={{ data: element, name: makeTitle(index) }}></HorizontalScrollList>
                     </Paper>
                 ))
             }

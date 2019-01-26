@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import DateRange from '@material-ui/icons/DateRange';
 import AccessTime from '@material-ui/icons/AccessTime';
 import MyLocation from '@material-ui/icons/MyLocation';
+import HowToReg from '@material-ui/icons/HowToReg';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import './Info.css'
@@ -24,7 +25,7 @@ const styles = {
     },
     fontInfoControl: {
         // fontFamily: "'Kaushan Script', cursive",
-        fontFamily : "'ZCOOL QingKe HuangYou', cursive",
+        fontFamily: "'ZCOOL QingKe HuangYou', cursive",
         // fontWeight: 'bold',
         color: '#494444',
         textAlign: 'center',
@@ -38,31 +39,33 @@ const Info = (props) => {
     const info = [
     ]
 
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
     return (
         <div className={classes.root}>
             <Grid container spacing={16} >
                 <Grid item lg={3} sm={6} xs={12}>
                     <Paper classes={{ root: classes.itemRoot }}>
-                        <div className='InfoIcon' style={{flexGrow:1}}>
+                        <div className='InfoIcon' style={{ flexGrow: 1 }}>
                             <DateRange fontSize='large' />
                         </div>
-                        <div className='InfoIcon' style={{flexGrow:3}}>
-                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{fontWeight:'bold'}}>
+                        <div className='InfoIcon' style={{ flexGrow: 3 }}>
+                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{ fontWeight: 'bold' }}>
                                 DATE
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
-                                28 Nov , 2019
+                                {props.data.getUTCDate()} {months[props.data.getMonth()]}, {props.data.getUTCFullYear()}
                             </Typography>
                         </div>
                     </Paper>
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12} >
                     <Paper classes={{ root: classes.itemRoot }}>
-                        <div className='InfoIcon'  style={{flexGrow:1}}>
+                        <div className='InfoIcon' style={{ flexGrow: 1 }}>
                             <AccessTime fontSize='large' />
                         </div>
-                        <div className='InfoIcon'  style={{flexGrow:3}}>
-                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{fontWeight:'bold'}}>
+                        <div className='InfoIcon' style={{ flexGrow: 3 }}>
+                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{ fontWeight: 'bold' }}>
                                 TIME
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
@@ -73,11 +76,11 @@ const Info = (props) => {
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12}>
                     <Paper classes={{ root: classes.itemRoot }}>
-                        <div className='InfoIcon'  style={{flexGrow:1}}>
+                        <div className='InfoIcon' style={{ flexGrow: 1 }}>
                             <MyLocation fontSize='large' />
                         </div>
-                        <div className='InfoIcon'  style={{flexGrow:3}}>
-                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{fontWeight:'bold'}}>
+                        <div className='InfoIcon' style={{ flexGrow: 3 }}>
+                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{ fontWeight: 'bold' }}>
                                 VENUE
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
@@ -88,11 +91,11 @@ const Info = (props) => {
                 </Grid>
                 <Grid item lg={3} sm={6} xs={12}>
                     <Paper classes={{ root: classes.itemRoot }}>
-                        <div className='InfoIcon'  style={{flexGrow:1}}>
-                            <DateRange fontSize='large' />
+                        <div className='InfoIcon' style={{ flexGrow: 1 }}>
+                            <HowToReg fontSize='large' />
                         </div>
-                        <div className='InfoIcon'  style={{flexGrow:3}}>
-                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{fontWeight:'bold'}}>
+                        <div className='InfoIcon' style={{ flexGrow: 3 }}>
+                            <Typography variant="h5" classes={{ h5: classes.fontInfoControl }} style={{ fontWeight: 'bold' }}>
                                 REGISTRATION
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
