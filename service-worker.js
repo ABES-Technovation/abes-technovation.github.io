@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/club-website-frontend/precache-manifest.35745c6b1b5c1e01da6c0151a483d52f.js"
+  "/club-website-frontend/precache-manifest.8d576f4b8a07ea7767f466c7353c763f.js"
 );
 
 workbox.clientsClaim();
