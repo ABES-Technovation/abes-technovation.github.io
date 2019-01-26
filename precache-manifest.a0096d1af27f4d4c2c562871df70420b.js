@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/club-website-frontend/static/js/runtime~main.ef99e519.js"
   },
   {
-    "revision": "dcaa41041c684f6cebaa",
-    "url": "/club-website-frontend/static/js/main.dcaa4104.chunk.js"
+    "revision": "8cea308e8fb32a9325f9",
+    "url": "/club-website-frontend/static/js/main.8cea308e.chunk.js"
   },
   {
     "revision": "39212575aec19df34e12",
     "url": "/club-website-frontend/static/js/1.39212575.chunk.js"
   },
   {
-    "revision": "dcaa41041c684f6cebaa",
+    "revision": "8cea308e8fb32a9325f9",
     "url": "/club-website-frontend/static/css/main.508c91cd.chunk.css"
   },
   {
-    "revision": "6dbde0d987593f7bd92fcb08ff9a3359",
+    "revision": "d81471aa5e4861b4718ee07e3aa05350",
     "url": "/club-website-frontend/index.html"
   }
 ];
