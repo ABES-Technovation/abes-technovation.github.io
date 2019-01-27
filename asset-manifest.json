@@ -1,14 +1,14 @@
 {
-  "main.css": "/club-website-frontend/static/css/main.b7d2eb1b.chunk.css",
-  "main.js": "/club-website-frontend/static/js/main.510bd1ce.chunk.js",
-  "main.js.map": "/club-website-frontend/static/js/main.510bd1ce.chunk.js.map",
-  "static/js/1.fafff443.chunk.js": "/club-website-frontend/static/js/1.fafff443.chunk.js",
-  "static/js/1.fafff443.chunk.js.map": "/club-website-frontend/static/js/1.fafff443.chunk.js.map",
-  "runtime~main.js": "/club-website-frontend/static/js/runtime~main.ef99e519.js",
-  "runtime~main.js.map": "/club-website-frontend/static/js/runtime~main.ef99e519.js.map",
-  "static/media/Event.css": "/club-website-frontend/static/media/discuss.ad0e8131.png",
-  "static/css/main.b7d2eb1b.chunk.css.map": "/club-website-frontend/static/css/main.b7d2eb1b.chunk.css.map",
-  "index.html": "/club-website-frontend/index.html",
-  "precache-manifest.28bcc4c5884b171d0d253b5081491778.js": "/club-website-frontend/precache-manifest.28bcc4c5884b171d0d253b5081491778.js",
-  "service-worker.js": "/club-website-frontend/service-worker.js"
+  "main.css": "/static/css/main.8f16140a.chunk.css",
+  "main.js": "/static/js/main.c952ae6b.chunk.js",
+  "main.js.map": "/static/js/main.c952ae6b.chunk.js.map",
+  "static/js/1.fafff443.chunk.js": "/static/js/1.fafff443.chunk.js",
+  "static/js/1.fafff443.chunk.js.map": "/static/js/1.fafff443.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/Event.css": "/static/media/discuss.ad0e8131.png",
+  "static/css/main.8f16140a.chunk.css.map": "/static/css/main.8f16140a.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.6c452182b33fc69b2bccced79c1547e0.js": "/precache-manifest.6c452182b33fc69b2bccced79c1547e0.js",
+  "service-worker.js": "/service-worker.js"
 }
