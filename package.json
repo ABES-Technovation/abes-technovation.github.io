@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "homepage": "https://abes-technovation.github.io",
+=======
+  "homepage": "http://abes-technovation.github.io/",
+>>>>>>> Added Links styling homepage card seeds
   "name": "Technovation",
   "version": "0.1.0",
   "private": true,

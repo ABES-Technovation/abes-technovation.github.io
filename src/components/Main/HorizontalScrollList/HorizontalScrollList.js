@@ -55,9 +55,9 @@ const HorizontalScrollList = props => {
 
     if (title === "Events") {
         cardStyle = (
-            tileData.data.map((cardData, index) => (
+            tileData.eventList.map((cardData, index) => (
                 <GridListTile key={index} >
-                    < EventCard data={cardData} />
+                    < EventCard data={cardData} id={index}/>
                 </GridListTile>
             ))
 

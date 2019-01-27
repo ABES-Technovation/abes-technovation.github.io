@@ -3,16 +3,15 @@ import './../Main/Main.css'
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import './HomePage.css';
+import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
+import Aux from './../../Hoc/Aux';
+import { withRouter } from 'react-router-dom';
 
 const styles = theme => ({
     image: {
         marginTop: '4%',
-        [theme.breakpoints.down('sm')]: {
-            width: 70 + '%',
-            height: 'auto',
-        },
-        [theme.breakpoints.up('md')]: {
-            width: 50 + '%',
+        [theme.breakpoints.up('xs')]: {
+            width: 100 + '%',
             height: 'auto',
         },
         [theme.breakpoints.up('lg')]: {
@@ -25,7 +24,7 @@ const styles = theme => ({
         textAlign: 'center',
         fontWeight: '400',
         fontFamily: "'Nunito', sans-serif",
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.up('xs')]: {
             fontSize: '36px',
             padding: '0%',
         },
@@ -42,20 +41,23 @@ const styles = theme => ({
 
 const HomePage = (props) => {
     const { classes } = props;
-
+    
     return (
-        <div className='Container' style={{height:'100%'}} >
-            <i className="fas fa-circle" id='dot' style={{ animationName: 'mv1', animationDelay: '1s' }}></i>
-            <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '3s' }}></i>
-            <i className="fas fa-circle" id='dot' style={{ animationName: 'mv3', animationDelay: '5s' }}></i>
-            <i className="fas fa-circle" id='dot' style={{ animationName: 'mv4', animationDelay: '7s' }}></i>
-            <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '9s' }}></i>
-            <Grid container={true} direction='column' alignItems='center'>
-                <img className={classes.image} src={process.env.PUBLIC_URL + '/discuss.png'} alt='' />
-                <p className={classes.font}>"We're in it for the people, not the projects."</p>
-            </Grid>
-        </div>
+        <Aux>
+            <div className='Container' style={{ height: '100%' }} >
+                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv1', animationDelay: '1s' }}></i>
+                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '3s' }}></i>
+                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv3', animationDelay: '5s' }}></i>
+                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv4', animationDelay: '7s' }}></i>
+                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '9s' }}></i>
+                <Grid container={true} direction='column' alignItems='center'>
+                    <img className={classes.image} src={process.env.PUBLIC_URL + '/discuss.png'} alt='' />
+                    <p className={classes.font}>"We're in it for the people, not the projects."</p>
+                </Grid>
+            </div>
+            <UpcomingEvent data={props.data.eventList} />
+        </Aux>
     );
 };
 
-export default withStyles(styles)(HomePage);
+export default withRouter(withStyles(styles)(HomePage));

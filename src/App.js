@@ -38,11 +38,12 @@ class App extends Component {
         <Aux>
           <Header data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
           <SideDrawer data={this.state} switchDrawerHandler={this.switchDrawerHandler} />
-          <Route path='/' exact component={HomePage} />
+          <Route path='/' exact render={() => <HomePage data={this.tileData.upcomingEvents} />} />
           <Route path='/explore' exact render={() => <Main data={this.tileData} />} />
           <Route path='/about' exact component={AboutUs} />
           <Route path='/profile/:id' exact component={Profile} />
-          <Route path='/event/:id' exact component={Event} />
+          <Route path='/upcoming/:id' exact render={() => <Event data={this.tileData.upcomingEvents} />} />
+          <Route path='/event/:id' exact render={() => <Event data={this.tileData.events} />} />
           <BottomBar />
         </Aux>
       </BrowserRouter>

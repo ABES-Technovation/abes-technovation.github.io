@@ -15,7 +15,6 @@ const styles = {
         padding: "2% 15%",
     },
     itemRoot: {
-        // backgroundColor: "#3F51B5",
         color: '#0676FC',
         display: 'flex',
         flexDirection: 'row',
@@ -24,23 +23,15 @@ const styles = {
 
     },
     fontInfoControl: {
-        // fontFamily: "'Kaushan Script', cursive",
         fontFamily: "'ZCOOL QingKe HuangYou', cursive",
-        // fontWeight: 'bold',
         color: '#494444',
         textAlign: 'center',
     }
 };
 
 const Info = (props) => {
-
     const { classes } = props;
-
-    const info = [
-    ]
-
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
     return (
         <div className={classes.root}>
             <Grid container spacing={16} >
@@ -54,7 +45,7 @@ const Info = (props) => {
                                 DATE
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
-                                {props.data.getUTCDate()} {months[props.data.getMonth()]}, {props.data.getUTCFullYear()}
+                                {props.date.getUTCDate()} {months[props.date.getMonth()]}, {props.date.getUTCFullYear()}
                             </Typography>
                         </div>
                     </Paper>
@@ -69,7 +60,7 @@ const Info = (props) => {
                                 TIME
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
-                                4:00 PM
+                                {props.date.getHours()} : {props.date.getMinutes()}
                             </Typography>
                         </div>
                     </Paper>
@@ -84,7 +75,7 @@ const Info = (props) => {
                                 VENUE
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
-                                Seminar Hall 2, Raman Block
+                                {props.data.venue}
                             </Typography>
                         </div>
                     </Paper>
@@ -99,12 +90,11 @@ const Info = (props) => {
                                 REGISTRATION
                             </Typography>
                             <Typography variant="subtitle1" classes={{ subtitle1: classes.fontInfoControl }}>
-                                Free
+                                {props.data.charge === "0" ? "Free" : "Rs. " + props.data.charge + "/-"}
                             </Typography>
                         </div>
                     </Paper>
                 </Grid>
-
             </Grid>
         </div>
     );
