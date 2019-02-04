@@ -5,7 +5,7 @@ import './Event.css';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Info from './Info/Info';
-import Aux from './../../Hoc/Aux';
+import Aux from './../../Hoc/_Aux';
 import TimeLeft from './TimeLeft';
 import { withRouter } from 'react-router-dom';
 

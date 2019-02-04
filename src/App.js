@@ -10,7 +10,7 @@ import Profile from './components/Profiles/profile';
 import { BrowserRouter, Route } from 'react-router-dom';
 import BottomBar from './components/BottomBar/BottomBar';
 import Event from './containers/Event/Event';
-import Aux from './Hoc/Aux';
+import Aux from './Hoc/_Aux';
 
 class App extends Component {
 

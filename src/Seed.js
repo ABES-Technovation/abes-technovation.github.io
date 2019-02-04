@@ -104,10 +104,11 @@ const data = {
   {
     id: '1',
     name: 'Akashdeep Arora',
-    about: 'Something About the person',
-    skills: ['some skill', 'some skill', 'some skill', 'some skill', 'some skill', 'some skill', 'some skill', 'some skill',
-      'some skill', 'some skill'],
+    fname:'Akashdeep',
+    about: "Hey, I am Akashdeep.I am a third year undergraduate and currently pursuing a major in Computer Science and Engineering from ABES Engineering College, Ghaziabad, India.I have a problem solving mindset and I am interested in Algorithms.I am preety handy with the tools such as HTML, CSS, Javascript,JQuerry and BOOTSTRAP I am a part of my college's premier coding club Technovation Club, which has always been an awesome learning experience !! Passions of mine include Writing, Travelling, Chess, learning new things ofcourse, if I get time apart from Programming and Academics!",
     image: 'https://akashdeep98.github.io/assets/images/akash.jpg',
+    status:'Focusing',
+    url:'https://akashdeep98.github.io/',
   },
   upcomingEvents: {
     eventList: [

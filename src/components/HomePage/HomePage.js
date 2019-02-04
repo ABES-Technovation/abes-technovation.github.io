@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import './HomePage.css';
 import UpcomingEvent from './UpcomingEvent/UpcomingEvent';
-import Aux from './../../Hoc/Aux';
+import Aux from './../../Hoc/_Aux';
 import { withRouter } from 'react-router-dom';
 
 const styles = theme => ({
@@ -36,6 +36,10 @@ const styles = theme => ({
             fontSize: '56px',
             padding: '0 25%',
         },
+    },
+    chips:
+    {
+        marginRight:'10px'
     }
 })
 
@@ -45,8 +49,8 @@ const HomePage = (props) => {
     return (
         <Aux>
             <div className='Container' style={{ height: '100%' }} >
-                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv1', animationDelay: '1s' }}></i>
-                <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '3s' }}></i>
+                <i className="fas fa-circle {Classes.chips}" id='dot' style={{ animationName: 'mv1', animationDelay: '1s' }}></i>
+                <i className="fas fa-circle " id='dot' style={{ animationName: 'mv2', animationDelay: '3s' }}></i>
                 <i className="fas fa-circle" id='dot' style={{ animationName: 'mv3', animationDelay: '5s' }}></i>
                 <i className="fas fa-circle" id='dot' style={{ animationName: 'mv4', animationDelay: '7s' }}></i>
                 <i className="fas fa-circle" id='dot' style={{ animationName: 'mv2', animationDelay: '9s' }}></i>
