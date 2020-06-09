@@ -40,7 +40,7 @@ const BottomBar = (props) => {
             <h1 className={classes.font}>Join Us</h1>
             <hr className={classes.hr} />
             <Grid container direction='row' justify='center'>
-                <a className={classes.icon} href="https://www.facebook.com/abestechnovation/"><i className="fab fa-github"></i></a>
+                <a className={classes.icon} href="https://github.com/ABES-Technovation/"><i className="fab fa-github"></i></a>
                 <a className={classes.icon} href="https://www.facebook.com/abestechnovation/"><i className="fab fa-facebook-square"></i></a>
                 <a className={classes.icon} href="https://www.instagram.com/technovationabes/"><i className="fab fa-instagram"></i></a>
                 <a className={classes.icon} href="mailto:technovation@abes.ac.in"><i className="fas fa-envelope"></i></a>
